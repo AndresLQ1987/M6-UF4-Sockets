@@ -3,6 +3,7 @@
     package="com.example.m6_uf4_sockets">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"

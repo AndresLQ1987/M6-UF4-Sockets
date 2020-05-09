@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_status;
     private static final int PORT = 5000;
     private static final String PETICION = "wonder";
-    private static final String IPDEFAULT = "";
+    private static final String IPDEFAULT = "54.163.168.66";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 PrintStream output = new PrintStream(socket.getOutputStream());
                 output.println(strings[1]);
                 result = input.readLine();
+                socket.close();
             } catch (IOException e) {
                 result = "fallo";
             }
