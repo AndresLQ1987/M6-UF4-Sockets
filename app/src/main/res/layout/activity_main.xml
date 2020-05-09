@@ -40,7 +40,6 @@
         android:id="@+id/btn_conect"
         android:layout_width="204dp"
         android:layout_height="95dp"
-        android:background="@color/Server_Conection_OK"
         android:text="@string/server_status"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
